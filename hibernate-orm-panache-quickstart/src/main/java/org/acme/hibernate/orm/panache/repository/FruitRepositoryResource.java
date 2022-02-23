@@ -2,7 +2,7 @@ package org.acme.hibernate.orm.panache.repository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import io.quarkus.panache.common.Sort;
+//import io.quarkus.panache.common.Sort;
 import org.jboss.logging.Logger;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
@@ -36,7 +36,7 @@ public class FruitRepositoryResource {
     @GET
     public List<Fruit> get() {
         //return fruitRepository.listAll(Sort.by("name"));
-        fruitRepository.nativeQuery();
+        return fruitRepository.nativeQuery();
     }
 
     @GET
